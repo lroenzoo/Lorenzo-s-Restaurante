@@ -29,48 +29,54 @@
 
     <!-- Contenido principal -->
     <main>
-        <!-- Sección de contacto y reservas -->
-        <section>
-            <h3 class="contacto">Contacto y Reservas</h3>
-            <form action="#" class="formulario">
-                
-                <label for="nombre">Nombre y Apellido:</label><br>
-                <div class="info-reserva">
-                    <input type="text" id="nombre" name="nombre"><br><br>
+        <!-- Contacto y reservas -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h3 class="contacto text-center mb-4">Contacto y Reservas</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4">
+                        <form action="#" class="formulario p-4 border rounded shadow-sm h-100">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre y Apellido:</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu Nombre Completo">
+                                </div>
+
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Fecha:</label>
+                                <input type="date" id="fecha" name="fecha" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="hora" class="form-label">Hora:</label>
+                                <input type="time" id="hora" name="hora" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="personas" class="form-label">Cantidad de personas:</label>
+                                <input type="number" id="personas" name="numero" min="1" max="20" class="form-control" placeholder="Ej: 4">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary mt-3">Enviar Reserva</button>
+                            </form>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-4">
+                        <div class="p-4 border rounded shadow-sm h-100 d-flex flex-column justify-content-between">
+                            <div class="mb-4">
+                                <label for="mensaje" class="form-label">Comentarios:</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" class="form-control" placeholder="Déjanos tus comentarios o solicitudes especiales"></textarea>
+                            </div>
+
+                            <div>
+                                <p class="lead fw-bold">Horario de atención:</p>
+                                <p class="mb-1">Lunes a Sábado: 12:00 a 15:00 y 20:00 a 00:00</p>
+                                <p class="mb-0">Domingo: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <label for="fecha">Fecha:</label><br>
-                <div class="info-reserva">
-                    <input type="date" id="fecha" name="fecha"><br><br>
-                </div>
-
-                <label for="hora">Hora:</label><br>
-                <div class="info-reserva">
-                    <input type="time" id="hora" name="hora"><br><br>
-                </div>
-
-                <label for="personas">Cantidad de personas:</label><br>
-                <div class="info-reserva">
-                    <input type="number" id="personas" name="numero" min="1" max="20"><br><br>
-                </div>
-
-                <div class="comentarios">
-                    <label for="mensaje">Comentarios:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="10" cols="30"></textarea><br><br>
-                </div>
-
-                <input type="submit" value="Enviar" class="boton-enviar">
-            </form>
-        </section>
-
-        
-        <section class="horario">
-            <p>
-                Horario de atención:<br>
-                Lunes a Sábado: 12:00 a 15:00 y 20:00 a 00:00<br>
-                Domingo: Cerrado
-            </p>
-        </section>
+            </div>
+        </div>
 
         <!-- Logo -->
         <section>
